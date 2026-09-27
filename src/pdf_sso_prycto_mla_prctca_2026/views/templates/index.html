@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Extractor de PDF</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="container">
+    <h1>Extractor de PDF</h1>
+    <a class="docs-link" href="{{ url_for('docs.index') }}">Ver manual de usuario</a>
+
+    <form class="upload-form" method="post" enctype="multipart/form-data" action="{{ url_for('pdf.upload') }}">
+      <input type="file" name="pdf_file" accept="application/pdf" required>
+      <button type="submit">Cargar PDF</button>
+    </form>
+
+    {% if upload_error %}
+      <p class="error">{{ upload_error }}</p>
+    {% endif %}
+
+    {% if error %}
+      <p class="error">{{ error }}</p>
+    {% elif filename %}
+      <h2>{{ filename }}</h2>
+      <pre class="pdf-text">{{ text }}</pre>
+      <a class="export-btn" href="{{ url_for('pdf.export') }}">Exportar a TXT</a>
+    {% else %}
+      <p class="placeholder">Carga un PDF para ver su contenido aquí.</p>
+    {% endif %}
+  </main>
+</body>
+</html>

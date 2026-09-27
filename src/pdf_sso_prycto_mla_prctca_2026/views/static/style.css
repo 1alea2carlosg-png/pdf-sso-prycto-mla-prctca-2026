@@ -1,0 +1,117 @@
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background: #f4f1ea;
+  color: #222;
+  margin: 0;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.4rem;
+  border-bottom: 2px solid #222;
+  padding-bottom: 0.5rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+.upload-form {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin: 1.5rem 0;
+  font-family: sans-serif;
+}
+
+.upload-form button {
+  padding: 0.5rem 1rem;
+  background: #444;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.upload-form button:hover {
+  background: #222;
+}
+
+.placeholder {
+  color: #666;
+  font-family: sans-serif;
+}
+
+.pdf-text {
+  white-space: pre-wrap;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1.5rem;
+  line-height: 1.6;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.error {
+  color: #a00;
+  font-weight: bold;
+}
+
+.export-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.4rem;
+  background: #2c5f2d;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-family: sans-serif;
+}
+
+.export-btn:hover {
+  background: #234b24;
+}
+
+.docs-link,
+.back-link {
+  display: inline-block;
+  margin: 0.5rem 0 1rem;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  color: #2c5f2d;
+}
+
+.docs-content h1 {
+  font-size: 1.4rem;
+}
+
+.docs-content h2 {
+  font-size: 1.1rem;
+}
+
+.docs-content code {
+  background: #eee;
+  padding: 0.15rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.docs-content pre {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.docs-content pre code {
+  background: none;
+  padding: 0;
+}
